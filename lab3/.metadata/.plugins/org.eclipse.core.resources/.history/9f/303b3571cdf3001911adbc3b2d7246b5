@@ -1,0 +1,8 @@
+.syntax unified
+.cpu cortex-m4
+.thumb
+
+.data
+	leds: .byte 0
+.text
+.global main

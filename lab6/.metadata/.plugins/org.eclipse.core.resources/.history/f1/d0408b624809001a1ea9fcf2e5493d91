@@ -1,0 +1,61 @@
+#include "stm32l476xx.h"
+#include "cmsis_gcc.h"
+#include "core_cm4.h"
+#include "core_cmFunc.h"
+#include "core_cmInstr.h"
+#include "core_cmSimd.h"
+#include "system_stm32l4xx.h"
+#define SET_REG(REG, SELECT, VAL) { ((REG)=((REG)&(~(SELECT))) | (VAL)); };
+// You can use your way to store TIME_SEC. Maybe it is `int` or `float` or any you want
+
+#define TIME_SEC 12.70
+#define TIM_COUNTERMODE_UP 0
+#define TIM_ARR_VAL 99U
+#define TIM_PSC_VAL 39999U
+
+
+extern void GPIO_init();
+extern void max7219_init();
+extern void Display();
+
+void Timer_init(TIM_TypeDef *timer){
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	SET_REG(TIM2->CR1, TIM_CR1_DIR, TIM_COUNTERMODE_UP);
+	TIM2->ARR = (uint32_t)TIM_ARR_VAL;
+	//TIM2->PSC = (uint32_t)TIME_SEC*(MSI_DEFAULT_FREQ/TIM_ARR_VAL);
+	TIM2->PSC = (uint32_t)TIM_PSC_VAL;
+	//TIM2->EGR = TIM_EGR_UG;
+	TIM2->EGR = 0x0001;
+}
+
+void Timer_start(TIM_TypeDef* timer) {
+	TIM2->CR1 |= TIM_CR1_CEN;
+
+	int pre_val = TIM_ARR_VAL;
+
+	while(1){
+		unsigned int timerValue = TIM2->CNT;
+		if(pre_val < timerValue){
+			TIM2->CR1 &= ~TIM_CR1_CEN;
+			return;
+		}
+		pre_val = timerValue;
+		int dis_val = TIME_SEC *100 * timerValue / TIM_ARR_VAL;
+		//Display_f(dis_val, 2);
+	}
+
+}
+
+int main() {
+	GPIO_init();
+	max7219_init();
+	Timer_init(TIM2);
+	Timer_start(TIM2);
+	while(1) {
+		unsigned int temp = TIM2->CNT;
+		//if (TIME_SEC < 0.01 || TIME_SEC > 10000) {
+		//
+		//} else if ( )
+
+	}
+}

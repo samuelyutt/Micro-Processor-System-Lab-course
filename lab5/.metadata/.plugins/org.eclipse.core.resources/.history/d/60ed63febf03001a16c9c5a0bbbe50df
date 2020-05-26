@@ -1,0 +1,24 @@
+#include "stm32l476xx.h"
+
+
+//These functions inside the asm file
+extern void GPIO_init();
+extern void max7219_init();
+extern void max7219_send(unsigned char address, unsigned char data);
+
+
+int display(unsigned int data, unsigned int num_digs) {
+	for (unsigned int i = 1; i < num_digs; i++) {
+		unsigned int digit = data % 10;
+		max7219_send(i, digit);
+		data /= 10;
+	}
+	return 0;
+}
+
+void main() {
+	unsigned int student_id = 0616026;
+	GPIO_init();
+	max7219_init();
+	display(student_id, 8);
+}

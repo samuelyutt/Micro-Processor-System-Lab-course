@@ -1,0 +1,35 @@
+#include "stm32l476xx.h"
+#include "cmsis_gcc.h"
+#include "core_cm4.h"
+#include "core_cmFunc.h"
+#include "core_cmInstr.h"
+#include "core_cmSimd.h"
+#include "system_stm32l4xx.h"
+// You can use your way to store TIME_SEC. Maybe it is `int` or `float` or any you want
+#define TIME_SEC 12.70
+
+extern void GPIO_init();
+extern void ​max7219_init​();
+extern void Display();
+
+void ​Timer_init​(/*TIM_TypeDef*timer*/) {
+​	//​TODO​: Initialize timer
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	SET_REG(TIM2->CR1, TIM_CR1_DIR, TIM_COUNTERMODE_DOWN);//down counter TIM2->ARR = (uint32_t)TIM_ARR_VAL;//Reload value
+	TIM2->PSC = (uint32_t)TIME_SEC*(MSI_DEFAULT_FREQ/TIM_ARR_VAL);//Prescalser TIM2->EGR = TIM_EGR_UG;//Reinitialize the counte
+}
+void ​Timer_start​(/*TIM_TypeDef*timer*/) {
+​//​TODO​: start timer and show the time on the 7-SEG LED.
+
+}
+
+int ​main​() {
+	GPIO_init();
+	​max7219_init​();
+	Timer_init();
+	Timer_start();
+	while​(1) {
+		//​TODO​: Polling the timer count and do lab requirements
+
+	}
+}

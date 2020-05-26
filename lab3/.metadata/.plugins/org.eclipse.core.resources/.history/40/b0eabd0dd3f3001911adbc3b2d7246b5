@@ -1,0 +1,22 @@
+.syntax unified
+.cpu cortex-m4
+.thumb
+
+.data
+	leds: .byte 0
+.text
+.global main
+.equ RCC_AHB2ENR, 0x4002104C
+.equ GPIOA_MODER, 0x48000000
+.equ GPIOA_IDR, 0x48000010
+
+
+main:
+	ldr r2, =GPIOA_IDR
+	ldr r3, [r2]
+	//mov r4, #1
+	//lsl r4, #13
+	//ands r3, r4
+
+L:
+	b L

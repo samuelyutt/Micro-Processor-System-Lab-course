@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:lab4-1 Run,org.eclipse.launchbar.core.descriptorType.default\:lab4-3 Debug,org.eclipse.launchbar.core.descriptorType.default\:lab4-2 Run
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:lab4-1\ Run/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:lab4-1\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:lab4-2\ Run/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:lab4-2\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:lab4-3\ Debug/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:lab4-3\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

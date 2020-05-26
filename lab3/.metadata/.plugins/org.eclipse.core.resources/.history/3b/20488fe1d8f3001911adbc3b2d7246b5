@@ -1,0 +1,33 @@
+.syntax unified
+.cpu cortex-m4
+.thumb
+
+.data
+	leds: .byte 0
+.text
+.global main
+.equ RCC_AHB2ENR, 0x4002104C
+.equ GPIOA_MODER, 0x48000000
+.equ GPIOA_IDR, 0x48000010
+
+
+main:
+	movs  r0, #0x7
+	ldr  r1, =RCC_AHB2ENR
+	str  r0,[r1]
+
+	// Set GPIOC Pin 13 as input mode
+	ldr r8, =GPIOA_MODER
+	ldr r0, [r8]
+	ldr r2, =#0xFFFF00FF
+	and r0, r2
+	str r0, [r8]
+
+L:
+	ldr r2, =GPIOA_IDR
+	ldr r3, [r2]
+	//mov r4, #1
+	//lsl r4, #13
+	//ands r3, r4
+
+	b L

@@ -1,0 +1,6 @@
+16:36:59 **** Incremental Build of configuration Debug for project project_sound ****
+make -j3 all 
+make: Nothing to be done for `all'.
+
+16:37:00 Build Finished (took 108ms)
+

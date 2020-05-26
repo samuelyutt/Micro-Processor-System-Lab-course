@@ -1,0 +1,189 @@
+#include "stm32l476xx.h"
+#include "cmsis_gcc.h"
+#include "core_cm4.h"
+#include "core_cmFunc.h"
+#include "core_cmInstr.h"
+#include "core_cmSimd.h"
+#include "system_stm32l4xx.h"
+
+//TODO: define your gpio pin
+/*
+#define X0
+#define X1
+#define X2
+#define X3
+#define Y0
+#define Y1
+#define Y2
+#define Y3
+unsigned int x_pin[4] = {X0, X1, X2, X3};
+unsigned int y_pin[4] = {Y0, Y1, Y2, Y3};
+*/
+int duty_cycle = 10;
+int nowf, pref;
+int pressed;
+
+const unsigned int Table[4][4] = {	{75, 80, 90, 500},
+									{101, 114, 120, 600},
+									{135, 152, -1, -1},
+									{-1, -1, -1, -1}};
+
+//These functions inside the asm file
+extern void GPIO_init();
+
+void keypad_init() {
+	// SET keypad gpio OUTPUT //
+			RCC->AHB2ENR = RCC->AHB2ENR|0x7;
+			//Set PA8,9,10,12 as input mode
+			GPIOA->MODER=GPIOA->MODER|0xABFF00FF;
+			GPIOA->MODER=GPIOA->MODER&0xFCC0FFFF;
+			//set PA8,9,10,12 is Pull-down input
+			GPIOA->PUPDR=GPIOA->PUPDR&0;
+			GPIOA->PUPDR=GPIOA->PUPDR|0x22A0000;
+			//Set PA8,9,10,12 as medium speed mode
+			GPIOA->OSPEEDR=GPIOA->OSPEEDR&0;
+			GPIOA->OSPEEDR=GPIOA->OSPEEDR|0x1150000;
+
+		// SET keypad gpio INPUT //
+		    //Set PB5,6,7,9 as OUTPUT mode
+			GPIOB->MODER=GPIOB->MODER|0xFFFFFEBF;
+			GPIOB->MODER=GPIOB->MODER&0xFFF757FF;
+			//set PB5,6,7,9 is Pull-up output
+			GPIOB->PUPDR=GPIOB->PUPDR&0;
+			GPIOB->PUPDR=GPIOB->PUPDR|0x45400;
+			//Set PB5,6,7,9 as medium speed mode
+			GPIOB->OSPEEDR=GPIOB->OSPEEDR&0;
+			GPIOB->OSPEEDR=GPIOB->OSPEEDR|0x45400;
+			//Set PB5,6,7,9 as high
+			GPIOB->ODR=GPIOB->ODR&0;
+			GPIOB->ODR=GPIOB->ODR|10111<<5;
+}
+
+void timer_init()
+{
+
+	/* GPIO: set PB4 as alternate function */
+	RCC->AHB2ENR |= 0x1 << 1;	/* enable AHB2 clock for port B */
+	GPIOB->MODER |= GPIO_MODER_MODE3_1;
+
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	// enable TIM2 timer clock
+	GPIOB->AFR[0] |= GPIO_AFRL_AFSEL3_0;
+	// select AF1 for PB3 (PB3 is TIM2_CH2)
+	TIM2->CR1 |= TIM_CR1_DIR;
+	// counter used as downcounter
+	TIM2->CR1 |= TIM_CR1_ARPE;
+	// enable auto-reload preload (buffer TIM2_ARR)
+	TIM2->ARR = (uint32_t) 100;
+	// auto-reload prescaler value
+	TIM2->CCMR1 &= 0xFFFFFCFF;
+	// select compare 2 (channel 2 is configured as output)
+	TIM2->CCMR1 |= (TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1);
+	// set output compare 2 mode to PWM mode 1
+	TIM2->CCMR1 |= TIM_CCMR1_OC2PE;
+	// enable output compare 2 preload register on TIM2_CCR2
+	TIM2->CCER |= TIM_CCER_CC2E;
+	// enable compare 2 output
+	TIM2->EGR = TIM_EGR_UG;
+	// re-initialize the counter and generates an update of the registers
+}
+
+void setduty(int d) {
+	if (d == 500) {
+		if (d < 90)
+			duty_cycle += 5;
+	} else if (d == 600) {
+		if (d > 10)
+			duty_cycle -= 5;
+	}
+}
+
+void timer_config()
+{
+	TIM2->PSC = (uint32_t) (4000000 / nowf / 100);
+	// prescaler value
+	TIM2->CCR2 = duty_cycle;
+	// compare 2 preload value
+}
+
+void buzzer(int tempf) {
+	if (tempf == 600 || tempf == 500) {
+		setduty(tempf);
+		timer_config();
+		return;
+	}
+	pref = nowf;
+	nowf = tempf;
+	if (nowf == -1) {
+		TIM2->CR1 &= ~TIM_CR1_CEN;
+	} else if (nowf != pref) {
+		timer_config();
+		TIM2->CR1 |= TIM_CR1_CEN;
+	}
+}
+
+char keypad_scan() {
+	while (1) {
+		int k = 0;
+		unsigned int flag_keypad = 0, flag_debounce = 0;
+
+		keypad_init();
+
+		int a = 0, b = 0, c = 0, d = 0;
+		if (!pressed)
+			buzzer(-1);
+
+		flag_keypad=GPIOA->IDR&10111<<8;
+		if (flag_keypad!=0) {
+			k = 20000;
+		}
+		while (k != 0) {
+			flag_debounce=GPIOA->IDR&10111<<8;
+			k--;
+		}
+
+		if (flag_debounce != 0) {
+			keypad_init();
+			pressed = 0;
+			for (int i=0; i<4 ; i++){
+				int position_c = i+5;
+				if (i==3) position_c++;
+				GPIOB->ODR=(GPIOB->ODR&0xFFFFFD1F)|1<<position_c;
+
+				for (int j=0; j<4; j++) {
+					int position_r = j+8;
+					if (j == 3) position_r++;
+					int flag_keypad_r=GPIOA->IDR&1<<position_r;
+
+					if (flag_keypad_r != 0) {
+						buzzer(Table[i][j]);
+						pressed = 1;
+					} else {
+						//buzzer(-1);
+					}
+				}
+			}
+			if (!pressed)
+				buzzer(-1);
+
+		} else {
+			TIM2->CR1 &= ~TIM_CR1_CEN;
+		}
+
+		GPIOB->ODR=GPIOB->ODR|10111<<5; //set PA8,9,10,12(column) high
+	}
+
+
+}
+
+void main() {
+	//GPIO_init();
+	timer_init();
+	//buzzer();
+	//max7219_init();
+	nowf = -1;
+	pref = -1;
+	pressed =0;
+	keypad_init();
+	keypad_scan();
+}

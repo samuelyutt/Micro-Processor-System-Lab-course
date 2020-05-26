@@ -1,0 +1,1459 @@
+11:04:50 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:05:06 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:05:06 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:06:02 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:06:02 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:06:50 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:06:50 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1224	   1088	   3440	    d70	lab2-2.elf
+ 
+11:07:36 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:07:36 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:08:04 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:08:04 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:08:17 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:08:18 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:08:26 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:08:26 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug/../startup/startup_stm32.s:83: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [lab2-2.elf] Error 1
+11:11:02 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:11:02 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+    968	   1088	   1088	   3144	    c48	lab2-2.elf
+ 
+11:11:20 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:19:21 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:33:33 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:33:33 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+    968	   1088	   1088	   3144	    c48	lab2-2.elf
+ 
+11:33:35 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:44:20 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:44:20 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:15: Error: garbage following instruction -- `movs r1,#12 mod 7'
+make: *** [src/main.o] Error 1
+11:44:28 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:44:29 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:15: Error: garbage following instruction -- `mov r1,#12 mod 7'
+make: *** [src/main.o] Error 1
+11:44:53 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+11:44:53 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:16: Error: bad instruction `mod r1,r1,#7'
+make: *** [src/main.o] Error 1
+13:30:53 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:30:53 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:58: Error: ARM register expected -- `mul r8,r8,#-1'
+../src/main.s:62: Warning: register range not in ascending order
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:75: Error: ARM register expected -- `mul r3,r3,#2'
+make: *** [src/main.o] Error 1
+13:31:58 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:31:58 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:63: Warning: register range not in ascending order
+../src/main.s:66: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1176	   1096	   1088	   3360	    d20	lab2-2.elf
+ 
+13:32:02 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:32:31 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:34:34 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:35:58 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:35:58 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:63: Warning: register range not in ascending order
+../src/main.s:66: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+13:36:01 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:37:08 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:37:24 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:37:25 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:37:27 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:38:22 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:38:22 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+13:38:27 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:39:42 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:39:42 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+13:39:45 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:40:15 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:40:16 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+13:40:25 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:46:57 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:47:17 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:47:55 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:54:18 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:54:18 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:74: Warning: register range not in ascending order
+../src/main.s:77: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1104	   1096	   1088	   3288	    cd8	lab2-2.elf
+ 
+13:54:20 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:55:26 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:55:27 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:77: Warning: register range not in ascending order
+../src/main.s:80: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+13:55:29 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:55:37 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:59:03 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+13:59:03 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+13:59:07 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:02:54 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:02:54 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Error: ARM register expected -- `push {[r8],[r2],[lr]}'
+../src/main.s:68: Warning: register range not in ascending order
+make: *** [src/main.o] Error 1
+14:04:45 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:04:53 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:04:53 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:04:58 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:06:03 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:07:47 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:07:47 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:07:50 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:08:07 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:14:11 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:14:11 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:67: Warning: register range not in ascending order
+../src/main.s:70: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:14:14 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:17:07 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:17:07 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:67: Warning: register range not in ascending order
+../src/main.s:70: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:17:10 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:18:00 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:18:00 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:18:08 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:18:49 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:18:49 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:65: Warning: register range not in ascending order
+../src/main.s:68: Warning: register range not in ascending order
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1096	   1088	   3272	    cc8	lab2-2.elf
+ 
+14:18:51 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:27:52 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:27:52 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1080	   1096	   1088	   3264	    cc0	lab2-2.elf
+ 
+14:27:56 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:28:24 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:28:24 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:28:28 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:36:29 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:36:29 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+14:36:33 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:38:45 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:38:45 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+14:38:47 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:10 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:10 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:12 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:48 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:48 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:39:50 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:43:15 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:43:15 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+14:43:22 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:43:23 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:43:24 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:46:18 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:46:18 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+14:46:22 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:46:36 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:46:36 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1112	   1096	   1088	   3296	    ce0	lab2-2.elf
+ 
+14:46:38 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:40:54 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:40:54 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:40:57 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:01:15 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:01:15 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:01:25 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:02:15 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:02:16 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:02:20 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:03:27 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:03:27 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:03:29 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:06:04 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:06:04 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:06:06 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:07:24 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:07:24 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:07:27 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:13:22 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:13:23 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+16:13:25 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:14:13 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1224	   1088	   3464	    d88	lab2-1.elf
+ 
+16:14:14 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:15:28 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1224	   1088	   3464	    d88	lab2-1.elf
+ 
+16:15:29 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:15:31 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:26:48 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:26:48 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:26:51 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:31 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:32 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:33 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:22:13 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:22:13 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:22:19 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:23:28 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1224	   1088	   3464	    d88	lab2-1.elf
+ 
+18:23:28 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:23:33 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:24:38 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:32:53 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:32:54 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:32:56 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:33:54 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1224	   1088	   3464	    d88	lab2-1.elf
+ 
+18:33:55 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:33:57 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:33 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:34 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:38 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:39:11 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:39:11 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:39:21 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:40:38 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:40:38 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-2.elf" @"objects.list"   -lm
+Finished building target: lab2-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-2.elf" "lab2-2.bin"
+arm-none-eabi-size "lab2-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1128	   1096	   1088	   3312	    cf0	lab2-2.elf
+ 
+18:40:42 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:43:14 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1224	   1088	   3464	    d88	lab2-1.elf
+ 
+18:43:15 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:43:17 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:52:34 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+18:52:35 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:52:41 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:52:47 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:52:47 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:52:49 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:58:03 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+18:58:03 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:58:05 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:59:14 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+18:59:15 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:59:16 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:00:09 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+19:00:09 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:00:11 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:51 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+19:02:52 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:52 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:04:52 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+19:04:53 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:04:55 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:06:44 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab2/lab2-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2-1.elf" @"objects.list"   -lm
+Finished building target: lab2-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2-1.elf" "lab2-1.bin"
+arm-none-eabi-size "lab2-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1224	   1088	   3472	    d90	lab2-1.elf
+ 
+19:06:45 **** Incremental Build of configuration Debug for project lab2-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:06:46 **** Incremental Build of configuration Debug for project lab2-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.

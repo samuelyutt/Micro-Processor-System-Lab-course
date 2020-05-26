@@ -1,0 +1,117 @@
+ .syntax unified
+ .cpu cortex-m4
+ .thumb
+
+.data
+	result: .word 0
+	max_size: .word 0
+.text
+.global main
+	//m: .word 0x5E
+	//n: .word 0x60
+
+	m: .word 0x4
+	n: .word 0x6
+
+main:
+	// r0 = m, r1 = n
+	mov r1, #12
+	ldr r4, =m
+	ldr r5, =n
+	ldr r1, [r4]
+	ldr r2, [r5]
+	movs r3, #1 // r3 = ans
+ 	//push {r1,r2,lr}
+ 	BL GCD
+ 	ldr r7, = result
+	str r3, [r7]
+	b L
+ // get return val and store into result
+
+GCD:
+ //TODO: Implement your GCD function
+ //pop {r1,r2}
+	//ldr r1, [sp]		// r1 = a
+	//ldr r2, [sp, #4]	// r2 = b
+	push {lr}
+
+	cmp r1, #0
+	bne t1
+	// a == 0
+	mul r3, r3, r2
+	//pop
+	pop {pc}
+	bx lr
+t1:
+	cmp r2, #0
+	bne t2
+	// b == 0
+	mul r3, r3, r1
+	//pop
+	pop {pc}
+	bx lr
+t2:
+	and r6, r1, #1		// a % 2
+	and r7, r2, #1		// b % 2
+
+	cmp r6, #0
+	beq t3
+	// a % 2 != 0; b?
+	cmp r7, #0
+	beq t5
+	// a % 2 != 0; b % 2 != 0
+	// else
+	sub r8, r1, r2
+	cmp r8, #0
+	bgt pos
+	mov r11, #-1
+	mul r8, r8, r11
+pos:
+	cmp r1, r2
+	blt asmall
+	mov r1, r8
+	bl GCD
+	pop {pc}
+	bx lr
+asmall:
+	mov r2, r1
+	mov r1, r8
+	bl GCD
+	pop {pc}
+	bx lr
+
+t3:
+	// a % 2 == 0; b?
+	cmp r7, #0
+	bne t4
+	// a % 2 == 0; b % 2 == 0
+	movs r1, r1, lsr#1
+	movs r2, r2, lsr#1
+	mov r11, #2
+	mul r3, r3, r11
+	bl GCD
+	pop {pc}
+	bx lr
+
+t4:
+	// a % 2 == 0; b % 2 != 0
+	// else if (a % 2 == 0)
+	movs r1, r1, lsr#1
+	bl GCD
+	pop {pc}
+	bx lr
+
+t5:
+	// a % 2 != 0; b % 2 == 0
+	// else if (b % 2 == 0)
+	movs r2, r2, lsr#1
+	bl GCD
+	pop {pc}
+	bx lr
+
+ BX LR
+
+
+L:
+	nop
+	b L;

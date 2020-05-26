@@ -1,0 +1,3763 @@
+14:40:18 **** Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../startup/startup_stm32.s
+Building file: ../startup/sysmem.c
+Building file: ../src/func.s
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Finished building: ../src/func.s
+Building file: ../src/main.c
+ 
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:75:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../startup/sysmem.c
+ 
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1352	   1088	   1104	   3544	    dd8	7-1.elf
+ 
+14:40:29 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:40:41 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:41:31 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:46:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:67:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+src/func.o: In function `.Delay_loop':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug/../src/func.s:49: undefined reference to `Detect'
+collect2: error: ld returned 1 exit status
+make: *** [7-1.elf] Error 1
+14:46:39 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:66:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+src/func.o: In function `.Delay_loop':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug/../src/func.s:49: undefined reference to `Detect'
+collect2: error: ld returned 1 exit status
+make: *** [7-1.elf] Error 1
+14:46:47 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+src/func.o: In function `.Delay_loop':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug/../src/func.s:49: undefined reference to `Detect'
+collect2: error: ld returned 1 exit status
+make: *** [7-1.elf] Error 1
+14:47:13 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:66:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+src/func.o: In function `.Delay_loop':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug/../src/func.s:49: undefined reference to `Detect'
+collect2: error: ld returned 1 exit status
+make: *** [7-1.elf] Error 1
+14:47:35 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../src/func.s
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1152	   1088	   1104	   3344	    d10	7-1.elf
+ 
+14:47:38 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:49:05 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:66:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1104	   3376	    d30	7-1.elf
+ 
+14:49:08 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:49:45 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:66:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1104	   3376	    d30	7-1.elf
+ 
+14:49:49 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:50:48 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1176	   1088	   1104	   3368	    d28	7-1.elf
+ 
+14:50:50 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:51:10 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1176	   1088	   1104	   3368	    d28	7-1.elf
+ 
+14:51:12 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:51:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:56:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1088	   1104	   3352	    d18	7-1.elf
+ 
+14:51:53 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+14:53:22 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:39:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-1/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-1.elf" @"objects.list"   -lm
+Finished building target: 7-1.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-1.elf" "7-1.bin"
+arm-none-eabi-size "7-1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1160	   1088	   1096	   3344	    d10	7-1.elf
+ 
+14:53:24 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:19:22 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:19:22 **** Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Finished building: ../src/func.s
+Building file: ../src/main.c
+ 
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:102:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+../src/main.c:97:15: warning: unused variable 'student_id' [-Wunused-variable]
+  unsigned int student_id = 616026;
+               ^~~~~~~~~~
+Finished building: ../startup/sysmem.c
+ 
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+src/func.o: In function `GPIO_init':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug/../src/func.s:51: undefined reference to `GPIOA_MODER'
+src/main.o: In function `main':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug/../src/main.c:99: undefined reference to `max7219_init'
+collect2: error: ld returned 1 exit status
+make: *** [7-2.elf] Error 1
+15:19:34 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:19:35 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:101:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+src/func.o: In function `GPIO_init':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug/../src/func.s:51: undefined reference to `GPIOA_MODER'
+collect2: error: ld returned 1 exit status
+make: *** [7-2.elf] Error 1
+15:19:48 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:19:48 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../src/func.s
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1200	   1088	   1088	   3376	    d30	7-2.elf
+ 
+15:19:57 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:20:09 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:20:13 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:20:13 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:20:16 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:21:43 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:21:43 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../src/func.s
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:21:45 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:23:33 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:23:33 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:101:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:23:40 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:24:50 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:24:50 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:101:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:25:00 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:27:03 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:27:03 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c:75:4: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+    max7219_send(1, 15);
+    ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:101:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:27:05 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:28:25 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:28:26 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:28:28 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:29:53 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:31:39 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'keypad_scan':
+../src/main.c:71:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c:75:4: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+    max7219_send(1, 15);
+    ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:96:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:101:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:31:54 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:32:03 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:32:03 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:32:06 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:33:18 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:33:18 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../src/func.s
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1184	   1088	   1088	   3360	    d20	7-2.elf
+ 
+15:33:20 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:34:58 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:34:58 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SysTick_Handler':
+../src/main.c:22:10: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  if (on) LEDON();
+          ^~~~~
+../src/main.c:23:7: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+  else LEDOFF();
+       ^~~~~~
+../src/main.c: In function 'keypad_scan':
+../src/main.c:93:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c:97:4: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+    max7219_send(1, 15);
+    ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:118:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1304	   1088	   1096	   3488	    da0	7-2.elf
+ 
+15:35:00 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:35:57 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+15:35:57 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SysTick_Handler':
+../src/main.c:21:10: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  if (on) LEDON();
+          ^~~~~
+../src/main.c:22:7: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+  else LEDOFF();
+       ^~~~~~
+../src/main.c: In function 'keypad_scan':
+../src/main.c:94:7: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+       display(Table[j][i]);
+       ^~~~~~~
+../src/main.c:98:4: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+    max7219_send(1, 15);
+    ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:119:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1304	   1088	   1096	   3488	    da0	7-2.elf
+ 
+15:35:59 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:02:32 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:02:32 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/func.s
+Building file: ../src/main.c
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/func.s
+ 
+../src/main.c: In function 'SysTick_Handler':
+../src/main.c:24:10: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  if (on) LEDON();
+          ^~~~~
+../src/main.c:25:7: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+  else LEDOFF();
+       ^~~~~~
+../src/main.c: At top level:
+../src/main.c:143:6: error: redefinition of 'SysTick_Handler'
+ void SysTick_Handler(void) {
+      ^~~~~~~~~~~~~~~
+../src/main.c:21:6: note: previous definition of 'SysTick_Handler' was here
+ void SysTick_Handler(void) // IF INTERRUPT HAPPENS, DO THIS TASK!
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'display':
+../src/main.c:223:2: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+  max7219_send(1, digit);
+  ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:232:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+make: *** [src/main.o] Error 1
+16:03:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:03:27 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SysTick_Handler':
+../src/main.c:24:10: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  if (on) LEDON();
+          ^~~~~
+../src/main.c:25:7: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+  else LEDOFF();
+       ^~~~~~
+../src/main.c: In function 'display':
+../src/main.c:223:2: warning: implicit declaration of function 'max7219_send' [-Wimplicit-function-declaration]
+  max7219_send(1, digit);
+  ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:232:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1104	   4016	    fb0	7-2.elf
+ 
+16:03:29 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:10:14 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:10:14 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SysTick_Handler':
+../src/main.c:24:10: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  if (on) LEDON();
+          ^~~~~
+../src/main.c:25:7: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+  else LEDOFF();
+       ^~~~~~
+../src/main.c: At top level:
+../src/main.c:223:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1104	   4016	    fb0	7-2.elf
+ 
+16:10:16 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:20:55 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:20:56 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:23:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:26:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1952	   1088	   1104	   4144	   1030	7-2.elf
+ 
+16:20:58 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:21:37 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:21:37 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:23:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:26:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1960	   1088	   1104	   4152	   1038	7-2.elf
+ 
+16:21:40 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:23:24 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:23:24 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:239:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1952	   1088	   1104	   4144	   1030	7-2.elf
+ 
+16:23:26 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:23:39 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:25:29 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:25:30 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:239:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2248	   1088	   1104	   4440	   1158	7-2.elf
+ 
+16:25:32 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:25:57 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:17 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:17 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:239:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2256	   1088	   1104	   4448	   1160	7-2.elf
+ 
+16:29:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:21 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:29:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:30:07 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:30:15 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:30:53 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:31:08 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:31:44 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:31:44 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:31:47 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:19 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:20 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:52 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:55 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:55 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:32:57 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:34:58 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:34:58 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:239:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2168	   1088	   1104	   4360	   1108	7-2.elf
+ 
+16:35:01 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:35:33 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:39:09 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:241:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2184	   1088	   1104	   4376	   1118	7-2.elf
+ 
+16:39:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:39:27 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:241:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2272	   1088	   1104	   4464	   1170	7-2.elf
+ 
+16:39:34 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:40:38 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:40:38 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:241:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+16:40:41 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:42:48 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:42:48 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2264	   1088	   1104	   4456	   1168	7-2.elf
+ 
+16:42:50 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:43:01 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:44:30 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:51:11 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:51:11 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2264	   1088	   1104	   4456	   1168	7-2.elf
+ 
+16:51:16 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:55:47 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:55:47 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2272	   1088	   1104	   4464	   1170	7-2.elf
+ 
+16:55:49 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:09 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:09 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2264	   1088	   1104	   4456	   1168	7-2.elf
+ 
+16:56:11 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:24 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:24 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2264	   1088	   1104	   4456	   1168	7-2.elf
+ 
+16:56:27 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:37 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:56:38 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:240:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2264	   1088	   1104	   4456	   1168	7-2.elf
+ 
+16:56:40 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:58:50 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+16:58:50 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+16:58:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:00:32 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:00:33 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:00:37 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:01:39 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:01:39 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:01:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:03:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:03:27 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:03:29 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:03:50 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:03:50 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:03:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:04:52 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:04:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:04:54 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:20:35 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:20:35 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:20:36 **** Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+Building file: ../startup/sysmem.c
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Finished building: ../src/func.s
+Building file: ../src/main.c
+ 
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Timer_init':
+../src/main.c:26:2: warning: implicit declaration of function 'SET_REG' [-Wimplicit-function-declaration]
+  SET_REG(TIM2->CR1, TIM_CR1_DIR, TIM_COUNTERMODE_UP);
+  ^~~~~~~
+Finished building: ../startup/sysmem.c
+../src/main.c: In function 'Timer_start':
+../src/main.c:42:3: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+ 
+   display (n);
+   ^~~~~~~
+../src/main.c:35:6: warning: unused variable 'pre_val' [-Wunused-variable]
+  int pre_val = TIM_ARR_VAL;
+      ^~~~~~~
+../src/main.c: In function 'Display':
+../src/main.c:51:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:54:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:271:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+src/func.o: In function `GPIO_init':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug/../src/func.s:59: undefined reference to `GPIOC_MODER'
+collect2: error: ld returned 1 exit status
+make: *** [7-3.elf] Error 1
+17:21:07 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:07 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:07 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/func.s
+Invoking: MCU GCC Assembler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/func.o" "../src/func.s"
+Finished building: ../src/func.s
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2304	   1088	   1104	   4496	   1190	7-3.elf
+ 
+17:21:17 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:22 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:22 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:21:53 **** Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:21:57 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:32:04 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:32:04 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:22:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c: At top level:
+../src/main.c:242:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-2/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-2.elf" @"objects.list"   -lm
+Finished building target: 7-2.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-2.elf" "7-2.bin"
+arm-none-eabi-size "7-2.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2280	   1088	   1104	   4472	   1178	7-2.elf
+ 
+17:32:05 **** Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:280:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:292:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2408	   1088	   1104	   4600	   11f8	7-3.elf
+ 
+17:32:09 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:34:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:34:21 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:34:22 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:280:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:292:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2608	   1088	   1104	   4800	   12c0	7-3.elf
+ 
+17:34:24 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:36:11 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:36:11 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:36:11 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:280:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:292:2: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+  LEDON();
+  ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2624	   1088	   1104	   4816	   12d0	7-3.elf
+ 
+17:36:17 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:38:41 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:38:41 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:38:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:38:43 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:41:18 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:41:18 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:41:18 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:41:19 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:43:00 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:43:00 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:43:00 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'buzzer':
+../src/main.c:50:3: warning: implicit declaration of function 'LEDON' [-Wimplicit-function-declaration]
+   LEDON();
+   ^~~~~
+../src/main.c:51:3: warning: implicit declaration of function 'LEDOFF' [-Wimplicit-function-declaration]
+   LEDOFF();
+   ^~~~~~
+../src/main.c: At top level:
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1088	   1104	   4744	   1288	7-3.elf
+ 
+17:44:26 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:44:26 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:44:26 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1088	   1104	   4744	   1288	7-3.elf
+ 
+17:44:30 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:24 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:24 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:24 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2512	   1088	   1104	   4704	   1260	7-3.elf
+ 
+17:45:26 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:51 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:45:51 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2480	   1088	   1104	   4672	   1240	7-3.elf
+ 
+17:45:53 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:46:22 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:46:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:46:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1088	   1104	   4744	   1288	7-3.elf
+ 
+17:46:24 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:46:41 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:47:54 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:47:54 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:47:54 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1088	   1104	   4744	   1288	7-3.elf
+ 
+17:47:58 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:48:20 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:48:20 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:48:20 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:285:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2552	   1088	   1104	   4744	   1288	7-3.elf
+ 
+17:48:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:48:27 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:49:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:49:21 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:49:21 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:49:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:49:28 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:50:09 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:50:09 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:50:09 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:50:12 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:50:20 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:51:10 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:51:11 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:51:11 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:51:12 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:52:42 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:52:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:52:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:52:45 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:53:09 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:53:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:53:51 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:53:52 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:53:54 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:54:13 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:54:33 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:54:33 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:54:33 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:54:34 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:54:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:57:07 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:58:03 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:03 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:03 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:58:06 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:14 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:55 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:55 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+17:58:55 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+17:58:57 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:00:51 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2576	   1088	   1104	   4768	   12a0	7-3.elf
+ 
+18:00:59 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:00:59 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:01:00 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:01:04 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:01:04 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:01:05 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:01:05 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:08:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:08:27 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:08:27 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:08:32 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:42 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:46 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:46 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:47 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:09:48 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:11:32 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:13:59 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:13:59 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:13:59 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2576	   1088	   1104	   4768	   12a0	7-3.elf
+ 
+18:14:01 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:18 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:19 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:19 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2576	   1088	   1104	   4768	   12a0	7-3.elf
+ 
+18:15:21 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:47 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:47 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:47 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:65:3: error: 'a' undeclared (first use in this function)
+   a = 1000000;
+   ^
+../src/main.c:65:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+make: *** [src/main.o] Error 1
+18:15:49 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:65:3: error: 'a' undeclared (first use in this function)
+   a = 1000000;
+   ^
+../src/main.c:65:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+make: *** [src/main.o] Error 1
+18:15:57 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:58 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:15:58 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+18:16:00 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:16:13 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:16:13 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:16:13 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2560	   1088	   1104	   4752	   1290	7-3.elf
+ 
+18:16:17 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:59:56 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:59:56 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:59:57 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+../src/main.c: In function 'main':
+../src/main.c:296:2: warning: implicit declaration of function 'timer_init'; did you mean 'GPIO_init'? [-Wimplicit-function-declaration]
+  timer_init();
+  ^~~~~~~~~~
+  GPIO_init
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug/../src/main.c:296: undefined reference to `timer_init'
+collect2: error: ld returned 1 exit status
+make: *** [7-3.elf] Error 1
+19:00:13 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:00:13 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:00:13 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2344	   1088	   1104	   4536	   11b8	7-3.elf
+ 
+19:00:14 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:23 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2368	   1088	   1104	   4560	   11d0	7-3.elf
+ 
+19:02:32 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:32 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:32 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:63:19: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+  SysTick->LOAD  = 4000000000000; //0.1s
+                   ^~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2368	   1088	   1104	   4560	   11d0	7-3.elf
+ 
+19:02:42 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:63:19: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+  SysTick->LOAD  = 40000000000; //0.1s
+                   ^~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2368	   1088	   1104	   4560	   11d0	7-3.elf
+ 
+19:02:46 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:47 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:47 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2368	   1088	   1104	   4560	   11d0	7-3.elf
+ 
+19:02:49 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:03:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:03:28 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:03:28 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:283:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2344	   1088	   1104	   4536	   11b8	7-3.elf
+ 
+19:03:29 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:05:56 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:05:56 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:05:57 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:286:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2368	   1088	   1112	   4568	   11d8	7-3.elf
+ 
+19:05:59 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:08:05 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:08:05 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:08:06 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:288:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2376	   1088	   1112	   4576	   11e0	7-3.elf
+ 
+19:08:08 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:47 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:47 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:47 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:295:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2408	   1088	   1112	   4608	   1200	7-3.elf
+ 
+19:09:53 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:53 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:53 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:09:55 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:20 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:21 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:21 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:295:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2416	   1088	   1112	   4616	   1208	7-3.elf
+ 
+19:10:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:11:40 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:11:40 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:11:40 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:289:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2376	   1088	   1112	   4576	   11e0	7-3.elf
+ 
+19:11:45 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:13:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:13:51 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:13:51 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:290:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2376	   1088	   1112	   4576	   11e0	7-3.elf
+ 
+19:13:53 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:05 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:05 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:05 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:289:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2376	   1088	   1112	   4576	   11e0	7-3.elf
+ 
+19:15:07 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:26:37 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:26:37 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:26:37 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:27:01 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:28:51 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:28:51 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:28:51 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:28:52 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:30:29 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:30:30 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:30:30 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:31:27 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:31:33 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:31:33 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:31:33 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:31:37 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:29:27 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:29:37 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:29:37 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:29:37 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:29:40 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:34:39 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:34:55 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:34:55 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:34:55 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:34:57 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:10 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:10 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:10 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:21 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:22 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:22 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:35:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:36:42 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:36:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:36:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:36:45 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:45:12 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:45:12 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:45:12 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:252:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2464	   1088	   1112	   4664	   1238	7-3.elf
+ 
+18:45:16 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:46:26 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:46:26 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:46:26 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:46:29 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:48:31 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:48:32 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:48:32 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:252:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2472	   1088	   1112	   4672	   1240	7-3.elf
+ 
+18:48:34 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:49:26 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:49:26 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:49:26 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:252:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2464	   1088	   1112	   4664	   1238	7-3.elf
+ 
+18:49:28 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:50:36 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:50:36 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:50:37 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:255:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2480	   1088	   1120	   4688	   1250	7-3.elf
+ 
+18:50:39 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:51:10 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:55:06 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:55:06 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:55:06 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:256:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2480	   1088	   1120	   4688	   1250	7-3.elf
+ 
+18:55:09 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:57:08 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:57:08 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:57:08 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+18:57:11 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:42 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:42 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:02:42 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:261:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2472	   1088	   1120	   4680	   1248	7-3.elf
+ 
+19:02:47 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:07:20 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:07:20 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:07:20 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:261:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2392	   1088	   1120	   4600	   11f8	7-3.elf
+ 
+19:07:24 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:52 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:53 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:10:53 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:207:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2376	   1088	   1112	   4576	   11e0	7-3.elf
+ 
+19:10:56 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:11:28 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:12:55 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:12:55 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:12:55 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:210:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2400	   1088	   1112	   4600	   11f8	7-3.elf
+ 
+19:12:59 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:14:14 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:14:14 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:14:15 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:211:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2408	   1088	   1112	   4608	   1200	7-3.elf
+ 
+19:14:18 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:04 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:04 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:15:04 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:211:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2400	   1088	   1112	   4600	   11f8	7-3.elf
+ 
+19:15:06 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:18:54 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:21:17 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:21:18 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:21:18 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Display':
+../src/main.c:56:15: error: invalid suffix "s" on integer constant
+  key_value = -99999s;
+               ^~~~~~
+../src/main.c: At top level:
+../src/main.c:211:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+make: *** [src/main.o] Error 1
+19:21:23 **** Incremental Build of configuration Debug for project 7-1 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:21:23 **** Incremental Build of configuration Debug for project 7-2 ****
+make -j3 all 
+make: Nothing to be done for `all'.
+19:21:23 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32L4 -DSTM32L476RGTx -DNUCLEO_L476RG -DDEBUG -I/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/inc -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:211:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main() {
+      ^~~~
+Finished building: ../src/main.c
+ 
+Building target: 7-3.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"/Users/samuelyu/Desktop/DesktopFile/MPSL/lab7/7-3/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "7-3.elf" @"objects.list"   -lm
+Finished building target: 7-3.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "7-3.elf" "7-3.bin"
+arm-none-eabi-size "7-3.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2400	   1088	   1112	   4600	   11f8	7-3.elf
+ 
+19:21:25 **** Incremental Build of configuration Debug for project 7-3 ****
+make -j3 all 
+make: Nothing to be done for `all'.

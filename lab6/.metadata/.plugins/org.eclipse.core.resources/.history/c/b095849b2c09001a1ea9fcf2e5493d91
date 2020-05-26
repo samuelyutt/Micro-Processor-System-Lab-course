@@ -1,0 +1,81 @@
+#include "stm32l476xx.h"
+#include "cmsis_gcc.h"
+#include "core_cm4.h"
+#include "core_cmFunc.h"
+#include "core_cmInstr.h"
+#include "core_cmSimd.h"
+#include "system_stm32l4xx.h"
+#define SET_REG(REG, SELECT, VAL) { ((REG)=((REG)&(~(SELECT))) | (VAL)); };
+
+
+//These functions inside the asm file
+extern void GPIO_init();
+extern void Delay1sWith4MHz();
+extern void LEDON();
+extern void LEDOFF();
+
+void SystemClock_Config(){
+	//SET_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, 6<<6);
+	RCC->CR |= ~RCC_CR_PLLON;
+	while((RCC->CR | RCC_CR_PLLRDY) == 1);//check HSI16 ready
+
+	//TODO: Change the SYSCLK source and set the corresponding Prescaler value.
+	RCC->CR |= RCC_CR_HSION;// turn on HSI16 oscillator
+	while((RCC->CR & RCC_CR_HSIRDY) == 0);//check HSI16 ready
+	SET_REG(RCC->CFGR, RCC_CFGR_HPRE, 9<<4);//SYSCLK divide by 2. SYSCLK = 16MHz/2 = 8Mhz
+	if((RCC->CR & RCC_CR_HSIRDY) == 0) {
+		//return;
+
+
+		RCC->CR |= RCC_CR_PLLON;
+		while((RCC->CR & RCC_CR_PLLRDY) == 0);//check HSI16 ready
+
+		//SET_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, 6<<6);
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLPEN;
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLQEN;
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;
+		return;
+
+	}
+	// Use HSI16 as system clock //APB1 prescaler not divide //APB2 prescaler not divide
+}
+
+/*
+void SystemClock_Config(){
+	//TODO: Change the SYSCLK source and set the corresponding Prescaler value.
+	RCC->CR |= ~RCC_CR_PLLON;
+	while((RCC->CR | RCC_CR_PLLRDY) == 1);//check HSI16 ready
+
+	RCC->CR |= RCC_CR_MSION;// turn on HSI16 oscillator
+	while((RCC->CR & RCC_CR_MSIRDY) == 0);
+	SET_REG(RCC->CR, RCC_CR_MSIRANGE, 6<<4);
+	SET_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, 6<<6);
+	if((RCC->CR & RCC_CR_MSIRDY) == 0) {
+		//return;
+
+
+		RCC->CR |= RCC_CR_PLLON;
+		while((RCC->CR & RCC_CR_PLLRDY) == 0);//check HSI16 ready
+
+		//SET_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, 6<<6);
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLPEN;
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLQEN;
+		//RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;
+		return;
+	}
+	// Use HSI16 as system clock //APB1 prescaler not divide //APB2 prescaler not divide
+}
+*/
+
+
+
+void main() {
+	SystemClock_Config();
+	GPIO_init();
+	while (1) {
+		LEDON();
+		Delay1sWith4MHz();
+		LEDOFF();
+		Delay1sWith4MHz();
+	}
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;5-1/src/func.s&apos; to &apos;GPIO_init.s&apos;" description="Rename resource &apos;func.s&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/func.s" name="GPIO_init.s" stamp="1573388737518" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;5-1/src/GPIO_init.s&apos; to &apos;func.s&apos;" description="Rename resource &apos;GPIO_init.s&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/GPIO_init.s" name="func.s" stamp="1573389439964" updateReferences="true"/>
+</session>

@@ -1,0 +1,19 @@
+#include "stm32l476xx.h"
+
+
+//These functions inside the asm file
+extern void GPIO_init();
+extern void Delay1sWith4MHz();
+extern void LEDON();
+extern void LEDOFF();
+
+
+
+
+
+void main() {
+	GPIO_init();
+	while (1) {
+		LEDON();
+	}
+}

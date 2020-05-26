@@ -1,0 +1,67 @@
+.syntax unified
+.cpu cortex-m4
+.thumb
+.text
+	.global GPIO_init
+	.global LEDON
+	.global LEDOFF
+	.global Delay1sWith4MHz
+.data
+	arr: .byte 0x7E, 0x30, 0x6D, 0x79, 0x33, 0x5B, 0x5F, 0x72, 0x7F, 0x7B, 0x77, 0x1F, 0x4E, 0x3D, 0x4F, 0x47
+	//TODO: put 0 to F 7-Seg LED pattern here
+.text
+	.global main
+	.equ RCC_AHB2ENR, 0x4002104C
+	.equ GPIO_BSRR_OFFSET, 0x18
+	.equ GPIO_BRR_OFFSET, 0x28
+
+	.equ GPIOA_BASE, 0x48000000
+	.equ GPIOA_MODER, 0x48000000
+	.equ GPIOA_OTYPER, 0x48000004
+	.equ GPIOA_PUDER, 0x4800000C
+	.equ GPIOA_ODR, 0x48000014
+
+
+LEDON:
+	//TODO: Display LED by leds
+	push {r0, r1}
+	ldr  r1, =GPIOA_ODR
+	ldr r0, =0xFF
+	str r0, [r1]
+	pop {r0, r1}
+	bx lr
+
+LEDOFF:
+	//TODO: Display LED by leds
+	push {r0, r1}
+	ldr  r1, =GPIOA_ODR
+	ldr r0, =0x0
+	str r0, [r1]
+	pop {r0, r1}
+	bx lr
+
+Delay1sWith4MHz:
+	//TODO: Write a delay 1sec function
+	push {r0, lr}
+	ldr r0, =#1000000
+.Delay_loop:
+	subs r0, r0, 1
+	bne .Delay_loop
+	pop {r0, pc}
+	BX LR
+
+GPIO_init:
+	//TODO: Initialize three GPIO pins as output for PA5
+	movs  r0, #0x1
+	ldr  r1, =RCC_AHB2ENR
+	str  r0,[r1]
+
+	ldr r0, =0x5400
+	ldr  r1, = GPIOA_MODER
+	ldr  r2, [r1]
+	ldr r3, =0xFFFF03FF
+	and  r2, r3
+	orrs r2, r2, r0
+	str  r2, [r1]
+
+	BX LR

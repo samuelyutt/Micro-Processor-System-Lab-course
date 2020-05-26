@@ -1,0 +1,305 @@
+#include "stm32l476xx.h"
+
+#define TIME_SEC 95.87
+#define TIM_COUNTERMODE_UP 0
+#define TIM_ARR_VAL 99U
+#define TIM_PSC_VAL 39999U
+//TODO: define your gpio pin
+
+extern void LEDON();
+extern void LEDOFF();
+int count;
+int scan_col;
+int key_value;
+int time;
+int sss = 0;
+const unsigned int Table[4][4] = {	{1, 2, 3, 10},
+					{4, 5, 6, 11},
+					{7, 8, 9, 12},
+					{15, 0, 14, 13}};
+
+
+//These functions inside the asm file
+extern void GPIO_init();
+//extern void max7219_init();
+//extern void max7219_send(unsigned char address, unsigned char data);
+/*
+void timer_init()
+{
+
+
+	RCC->AHB2ENR |= 0x1 << 1;
+	GPIOB->MODER |= GPIO_MODER_MODE3_1;
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	GPIOB->AFR[0] |= GPIO_AFRL_AFSEL3_0;
+	TIM2->CR1 |= TIM_CR1_DIR;
+	TIM2->CR1 |= TIM_CR1_ARPE;
+	TIM2->ARR = (uint32_t) 100;
+	TIM2->CCMR1 &= 0xFFFFFCFF;
+	TIM2->CCMR1 |= (TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1);
+	TIM2->CCMR1 |= TIM_CCMR1_OC2PE;
+	TIM2->CCER |= TIM_CCER_CC2E;
+	TIM2->EGR = TIM_EGR_UG;
+	TIM2->PSC = (uint32_t) (4000000 / 500 / 100);
+	TIM2->CCR2 = 90;
+}
+*/
+
+
+void buzzer() {
+
+	//TIM2->CR1 |= TIM_CR1_CEN;
+	while(GPIOC->IDR&1<<13) {
+		LEDON();
+		LEDOFF();
+	}
+	//int a = 200000;
+	//while(a--);
+	//TIM2->CR1 &= ~TIM_CR1_CEN;
+}
+
+/* TODO: initial keypad gpio pin, X as output and Y as input */
+void Display(int count) {
+	sss = 1;
+	while(count > 0) {
+		count--;
+
+		int a = 600000;
+		while(a--);
+		if(count <0)break;
+	}
+	sss = 0;
+	if (count != -1)
+		buzzer();
+	key_value = -1;
+}
+
+
+void SysTick_Handler(void) // IF INTERRUPT HAPPENS, DO THIS TASK!
+{
+    if(sss)
+    	return;
+	//TODO: Show temperature on 7-seg display
+	GPIOA->BRR = (0b10111 << 8);
+	int st = (((scan_col+1)%4)+8);
+	if (st == 11) st++;
+	GPIOA->BSRR = (1 << st);
+	scan_col = (scan_col+1)%4;
+
+
+	//if (on) LEDON();
+	//else LEDOFF();
+
+	//on ^= 1;
+}
+
+void SystemClock_Config(){
+	// Turn HSI on
+	//RCC->CR |= RCC_CR_HSION;
+	//while((RCC->CR & RCC_CR_HSIRDY) == 0);
+
+	RCC->APB2ENR |= 1;
+	SysTick->LOAD  = 4000; //0.1s
+	SysTick->VAL   = 0; //Load the SysTick Counter Value
+	SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk | SysTick_CTRL_ENABLE_Msk;
+	return;
+}
+
+
+void keypad_init() {
+	// SET keypad gpio OUTPUT //
+		RCC->AHB2ENR = RCC->AHB2ENR|0x7;
+		//Set PA8,9,10,12 as output mode
+		GPIOA->MODER= GPIOA->MODER&0xFDD5FFFF;
+		//set PA8,9,10,12 is Pull-up output
+		GPIOA->PUPDR=GPIOA->PUPDR|0x1150000;
+		//Set PA8,9,10,12 as medium speed mode
+		GPIOA->OSPEEDR=GPIOA->OSPEEDR|0x1150000;
+		//Set PA8,9,10,12 as high
+		GPIOA->ODR=GPIOA->ODR|10111<<8;
+
+	// SET keypad gpio INPUT //
+	    //Set PC0,1,2,3 as INPUT mode
+		GPIOC->MODER=GPIOC->MODER&0xFFFFFF00;
+		//set PC0,1,2,3 is Pull-down input
+		GPIOC->PUPDR=GPIOC->PUPDR|0xAA;
+		//Set PC0,1,2,3 as medium speed mode
+		GPIOC->OSPEEDR=GPIOC->OSPEEDR|0x55;
+}
+
+/* TODO: scan keypad value return:
+>=0: key pressedvalue
+-1: no keypress */
+/*
+char keypad_scan() {
+	while (1) {
+		int k = 0;
+		unsigned int flag_keypad = 0, flag_debounce = 0;
+		flag_keypad=GPIOB->IDR&10111<<5;
+		if (flag_keypad!=0) {
+			k = 20000;
+		}
+		while (k != 0) {
+			flag_debounce=GPIOB->IDR&10111<<5;
+			k--;
+		}
+		if (flag_debounce != 0) {
+			for (int i=0; i<4; i++){
+				//scan keypad from first column
+				int position_c = i+8;
+				if (i==3)
+					position_c++;
+				//set PA8,9,10,12(column) low and set pin high from PA8
+				GPIOA->ODR=(GPIOA->ODR&0xFFFFE8FF)|1<<position_c;
+
+				for (int j=0; j<4; j++) {
+					//read input from first row
+					int position_r = j+5;
+					if (j == 3)
+						position_r++;
+
+					int flag_keypad_r=GPIOB->IDR&1<<position_r;
+					if (flag_keypad_r != 0)
+						display(Table[j][i]);
+				}
+			}
+		} else {
+			max7219_send(1, 15);
+			max7219_send(2, 15);
+		}
+		GPIOA->ODR=GPIOA->ODR|10111<<8; //set PA8,9,10,12(column) high
+	}
+
+
+}
+*/
+
+void EXTI_Setup(){
+	//select source for EXTI0.1.2.3
+	SYSCFG->EXTICR[0] |= (SYSCFG_EXTICR1_EXTI0_PC | SYSCFG_EXTICR1_EXTI1_PC | SYSCFG_EXTICR1_EXTI2_PC | SYSCFG_EXTICR1_EXTI3_PC);
+	// setup EXTI
+	//enable interrupt 0.1.2.3
+	EXTI->IMR1 |= (EXTI_IMR1_IM3 | EXTI_IMR1_IM2 | EXTI_IMR1_IM1 | EXTI_IMR1_IM0);
+	//select falling edge 0.1.2.3
+	EXTI->FTSR1 |= (EXTI_FTSR1_FT3 | EXTI_FTSR1_FT2 | EXTI_FTSR1_FT1 | EXTI_FTSR1_FT0);
+	//clear
+	EXTI->PR1 |= (EXTI_PR1_PIF3 | EXTI_PR1_PIF2 | EXTI_PR1_PIF1 | EXTI_PR1_PIF0);
+
+	//enable interrupt mask
+	NVIC_EnableIRQ(EXTI0_IRQn);
+	NVIC_EnableIRQ(EXTI1_IRQn);
+	NVIC_EnableIRQ(EXTI2_IRQn);
+	NVIC_EnableIRQ(EXTI3_IRQn);
+	//clear pending flag
+	NVIC_ClearPendingIRQ(EXTI0_IRQn);
+	NVIC_ClearPendingIRQ(EXTI1_IRQn);
+	NVIC_ClearPendingIRQ(EXTI2_IRQn);
+	NVIC_ClearPendingIRQ(EXTI3_IRQn);
+	//set priority
+	NVIC_SetPriority(EXTI0_IRQn,0);
+	NVIC_SetPriority(EXTI1_IRQn,0);
+	NVIC_SetPriority(EXTI2_IRQn,0);
+	NVIC_SetPriority(EXTI3_IRQn,0);
+	//set systick priority level
+	//SCB->SHP[(((uint32_t)(int32_t)-1) & 0xFUL)-4UL] = (uint8_t)((1 << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+	SCB->SHP[11] = 0xFF;
+}
+/*
+void SysTick_Handler(void) {
+	GPIOB->BRR = (0b1111 << 5);
+	GPIOB->BSRR = (1 << (((scan_col+1)%4)+5));
+	scan_col = (scan_col+1)%4;
+}
+*/
+void EXTI0_IRQHandler(void){
+	if(scan_col == 0)
+		key_value = 1;
+	else if(scan_col == 1)
+		key_value = 2;
+	else if(scan_col == 2)
+		key_value = 3;
+	else if(scan_col == 3)
+		key_value = 10;
+	//clear pending flag
+	NVIC_ClearPendingIRQ(EXTI0_IRQn);
+	NVIC_ClearPendingIRQ(EXTI1_IRQn);
+	NVIC_ClearPendingIRQ(EXTI2_IRQn);
+	NVIC_ClearPendingIRQ(EXTI3_IRQn);
+	//clear exti
+	EXTI->PR1 |= (EXTI_PR1_PIF3 | EXTI_PR1_PIF2 | EXTI_PR1_PIF1 | EXTI_PR1_PIF0);
+}
+
+void EXTI1_IRQHandler(void){
+	if(scan_col == 0)
+		key_value = 4;
+	else if(scan_col == 1)
+		key_value = 5;
+	else if(scan_col == 2)
+		key_value = 6;
+	else if(scan_col == 3)
+		key_value = 11;
+	//clear pending flag
+	NVIC_ClearPendingIRQ(EXTI0_IRQn);
+	NVIC_ClearPendingIRQ(EXTI1_IRQn);
+	NVIC_ClearPendingIRQ(EXTI2_IRQn);
+	NVIC_ClearPendingIRQ(EXTI3_IRQn);
+	//clear exti
+	EXTI->PR1 |= (EXTI_PR1_PIF3 | EXTI_PR1_PIF2 | EXTI_PR1_PIF1 | EXTI_PR1_PIF0);
+}
+
+void EXTI2_IRQHandler(void){
+	if(scan_col == 0)
+		key_value = 7;
+	else if(scan_col == 1)
+		key_value = 8;
+	else if(scan_col == 2)
+		key_value = 9;
+	else if(scan_col == 3)
+		key_value = 12;
+	//clear pending flag
+	NVIC_ClearPendingIRQ(EXTI0_IRQn);
+	NVIC_ClearPendingIRQ(EXTI1_IRQn);
+	NVIC_ClearPendingIRQ(EXTI2_IRQn);
+	NVIC_ClearPendingIRQ(EXTI3_IRQn);
+	//clear exti
+	EXTI->PR1 |= (EXTI_PR1_PIF3 | EXTI_PR1_PIF2 | EXTI_PR1_PIF1 | EXTI_PR1_PIF0);
+}
+
+void EXTI3_IRQHandler(void){
+	if(scan_col == 0)
+		key_value = 15;
+	else if(scan_col == 1)
+		key_value = 0;
+	else if(scan_col == 2)
+		key_value = 14;
+	else if(scan_col == 3)
+		key_value = 13;
+	//clear pending flag
+	NVIC_ClearPendingIRQ(EXTI0_IRQn);
+	NVIC_ClearPendingIRQ(EXTI1_IRQn);
+	NVIC_ClearPendingIRQ(EXTI2_IRQn);
+	NVIC_ClearPendingIRQ(EXTI3_IRQn);
+	//clear exti
+	EXTI->PR1 |= (EXTI_PR1_PIF3 | EXTI_PR1_PIF2 | EXTI_PR1_PIF1 | EXTI_PR1_PIF0);
+}
+
+
+
+void main() {
+	GPIO_init();
+	SystemClock_Config();
+	EXTI_Setup();
+
+	//max7219_init();
+	keypad_init();
+	//keypad_scan();
+	//on = 1;
+	scan_col = 0;
+	key_value = -1;
+	LEDON();
+	//timer_init();
+	//TIM2->CR1 |= TIM_CR1_CEN;
+	while(1) {
+		Display(key_value);
+	}
+}

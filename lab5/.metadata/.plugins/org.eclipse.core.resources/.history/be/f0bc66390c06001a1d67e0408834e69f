@@ -1,0 +1,284 @@
+#include "stm32l476xx.h"
+
+//TODO: define your gpio pin
+/*
+#define X0
+#define X1
+#define X2
+#define X3
+#define Y0
+#define Y1
+#define Y2
+#define Y3
+unsigned int x_pin[4] = {X0, X1, X2, X3};
+unsigned int y_pin[4] = {Y0, Y1, Y2, Y3};
+*/
+
+const unsigned int Table[4][4] = {	{1, 2, 3, 10},
+					{4, 5, 6, 11},
+					{7, 8, 9, 12},
+					{15, 0, 14, 13}};
+
+
+//These functions inside the asm file
+extern void GPIO_init();
+extern void max7219_init();
+extern void max7219_send(unsigned char address, unsigned char data);
+int pz;
+
+/* TODO: initial keypad gpio pin, X as output and Y as input */
+void keypad_init() {
+	// SET keypad gpio OUTPUT //
+		RCC->AHB2ENR = RCC->AHB2ENR|0x2;
+		//Set PA8,9,10,12 as output mode
+		GPIOA->MODER=GPIOA->MODER|0xABFF00FF;
+		GPIOA->MODER=GPIOA->MODER&0xFDD5FFFF;
+		//set PA8,9,10,12 is Pull-up output
+		GPIOA->PUPDR=GPIOA->PUPDR&0;
+		GPIOA->PUPDR=GPIOA->PUPDR|0x1150000;
+		//Set PA8,9,10,12 as medium speed mode
+		GPIOA->OSPEEDR=GPIOA->OSPEEDR&0;
+		GPIOA->OSPEEDR=GPIOA->OSPEEDR|0x1150000;
+		//Set PA8,9,10,12 as high
+		GPIOA->ODR=GPIOA->ODR&0;
+		GPIOA->ODR=GPIOA->ODR|10111<<8;
+
+	// SET keypad gpio INPUT //
+	    //Set PB5,6,7,9 as INPUT mode
+		GPIOB->MODER=GPIOB->MODER|0xFFFFFEBF;
+		GPIOB->MODER=GPIOB->MODER&0xFFF303FF;
+		//set PB5,6,7,9 is Pull-down input
+		GPIOB->PUPDR=GPIOB->PUPDR&0;
+		GPIOB->PUPDR=GPIOB->PUPDR|0x8A800;
+		//Set PB5,6,7,9 as medium speed mode
+		GPIOB->OSPEEDR=GPIOB->OSPEEDR&0;
+		GPIOB->OSPEEDR=GPIOB->OSPEEDR|0x45400;
+}
+
+
+void keypad_init2() {
+	// SET keypad gpio OUTPUT //
+			RCC->AHB2ENR = RCC->AHB2ENR|0x2;
+			//Set PA8,9,10,12 as input mode
+			GPIOA->MODER=GPIOA->MODER|0xABFF00FF;
+			GPIOA->MODER=GPIOA->MODER&0xFCC0FFFF;
+			//set PA8,9,10,12 is Pull-down input
+			GPIOA->PUPDR=GPIOA->PUPDR&0;
+			GPIOA->PUPDR=GPIOA->PUPDR|0x22A0000;
+			//Set PA8,9,10,12 as medium speed mode
+			GPIOA->OSPEEDR=GPIOA->OSPEEDR&0;
+			GPIOA->OSPEEDR=GPIOA->OSPEEDR|0x1150000;
+
+		// SET keypad gpio INPUT //
+		    //Set PB5,6,7,9 as OUTPUT mode
+			GPIOB->MODER=GPIOB->MODER|0xFFFFFEBF;
+			GPIOB->MODER=GPIOB->MODER&0xFFF757FF;
+			//set PB5,6,7,9 is Pull-up output
+			GPIOB->PUPDR=GPIOB->PUPDR&0;
+			GPIOB->PUPDR=GPIOB->PUPDR|0x45400;
+			//Set PB5,6,7,9 as medium speed mode
+			GPIOB->OSPEEDR=GPIOB->OSPEEDR&0;
+			GPIOB->OSPEEDR=GPIOB->OSPEEDR|0x45400;
+			//Set PB5,6,7,9 as high
+			GPIOB->ODR=GPIOB->ODR&0;
+			GPIOB->ODR=GPIOB->ODR|10111<<5;
+}
+
+/* TODO: scan keypad value return:
+>=0: key pressedvalue
+-1: no keypress */
+void ct(int a, int b) {
+	int temp;
+	if (a<b) {
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	if (!pz && b ==0) {
+		display(a);
+		return;
+	}
+
+	if (b > 9)
+		a *= 100;
+	else
+		a *= 10;
+	dis(a+b);
+}
+
+
+char keypad_scan() {
+	while (1) {
+		int k = 0;
+		unsigned int flag_keypad = 0, flag_debounce = 0;
+
+		int a = 0, b = 0, c = 0, d = 0;
+		pz = 0;
+		/*
+		flag_keypad=GPIOB->IDR&10111<<5;
+		if (flag_keypad!=0) {
+			k = 20000;
+		}
+		while (k != 0) {
+			flag_debounce=GPIOB->IDR&10111<<5;
+			k--;
+		}
+		*/
+		////
+		flag_keypad=GPIOA->IDR&10111<<8;
+				if (flag_keypad!=0) {
+					k = 20000;
+				}
+				while (k != 0) {
+					flag_debounce=GPIOA->IDR&10111<<8;
+					k--;
+				}
+		////
+
+		if (flag_debounce != 0) {
+
+			//int firstpressed = 0;
+			//for (int i=0; i<4 && !firstpressed; i++){
+
+			keypad_init();
+			for (int i=0; i<4 ; i++){
+				//scan keypad from first column
+				int position_c = i+8;
+				if (i==3) position_c++;
+				//set PA8,9,10,12(column) low and set pin high from PA8
+				GPIOA->ODR=(GPIOA->ODR&0xFFFFE8FF)|1<<position_c;
+
+				//for (int j=0; j<4 && !firstpressed; j++) {
+				for (int j=0; j<4; j++) {
+					//read input from first row
+					int position_r = j+5;
+					if (j == 3) position_r++;
+					int flag_keypad_r=GPIOB->IDR&1<<position_r;
+					if (flag_keypad_r != 0) {
+						if (a) b = Table[j][i];
+						else a = Table[j][i];
+						if (Table[j][i] == 0) pz = 1;
+						//firstpressed = 1;
+					}
+				}
+			}
+
+			keypad_init2();
+			//int secondpressed = 0;
+			//for (int i=3; i>=0 && !secondpressed; i--){
+			for (int i=0; i<4 ; i++){
+				int position_c = i+5;
+				if (i==3) position_c++;
+				GPIOB->ODR=(GPIOB->ODR&0xFFFFFD1F)|1<<position_c;
+
+				for (int j=0; j<4; j++) {
+					int position_r = j+8;
+					if (j == 3) position_r++;
+					int flag_keypad_r=GPIOA->IDR&1<<position_r;
+
+					if (flag_keypad_r != 0) {
+						if (c) d = Table[i][j];
+						else c = Table[i][j];
+						if (Table[i][j] == 0) pz = 1;
+						//firstpressed = 1;
+					}
+				}
+			}
+
+		}
+/*
+		if (a==-1 && b==-1 && c==-1 && d==-1) {
+			max7219_send(1, 0);
+			max7219_send(2, 15);
+			max7219_send(3, 15);
+			max7219_send(4, 15);
+		} else {
+*/
+
+
+		/*
+		if( (a+b)>= (c+d) ){
+			if (a==b)
+					display(a);
+			else
+					display(a+b);
+		}
+		else{
+			if (c==d)
+					display(c);
+			else
+					display(c+d);
+		}
+*/
+
+
+		if( (a+b)>= (c+d) ){
+			if (a==b)
+					display(a);
+			else
+					ct(a, b);
+		}
+		else{
+			if (c==d)
+				display(c);
+			else
+				ct(c, d);
+		}
+
+
+
+		//}
+		GPIOA->ODR=GPIOA->ODR|10111<<8; //set PA8,9,10,12(column) high
+	}
+
+
+}
+
+
+int display(int num) {
+	unsigned int digit = num % 10;
+	max7219_send(1, digit);
+	num /= 10;
+	if (num)
+		max7219_send(2, num);
+	else
+		max7219_send(2, 15);
+	max7219_send(3, 15);
+	max7219_send(4, 15);
+	return 0;
+}
+
+int dis(int num) {
+	unsigned int digit;
+
+	digit = num % 10;
+	max7219_send(1, digit);
+
+	num /= 10;
+	digit = num % 10;
+	if (digit == 0)
+		digit = 15;
+	max7219_send(2, digit);
+
+	num /= 10;
+	digit = num % 10;
+	if (digit == 0)
+		digit = 15;
+	max7219_send(3, digit);
+
+	num /= 10;
+	digit = num % 10;
+	if (digit == 0)
+		digit = 15;
+	max7219_send(4, digit);
+
+
+}
+
+void main() {
+	//unsigned int student_id = 616026;
+	GPIO_init();
+	max7219_init();
+	keypad_init2();
+	keypad_scan();
+}
